@@ -1,7 +1,7 @@
 <?php 
 require_once dirname(__FILE__).'/../config.php';
 
-
+include _ROOT_PATH.'/app/security/check.php';
 //Parametry
 function getParameters(&$amount,&$months,&$interest){
     $amount = isset($_REQUEST['amount']) ? $_REQUEST['amount'] : null;
