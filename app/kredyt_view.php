@@ -5,23 +5,37 @@
 <title>Kalkulator</title>
 </head>
 <body>
-
-<form action="<?php print(_APP_URL);?>/app/kredyt.php" method="get">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css">
+        <div style="margin: 0; position: absolute;top: 50%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%) ">
+<!--<form class="pure-form pure-form-stacked" action="<?php print(_APP_URL);?>/app/kredyt.php" method="get">
 	<label for="id_x">Kwota: </label>
-	<input id="id_x" type="text" name="x" value="<?php if (isset($x)) print($x); ?>" /><br />
+	<input id="id_x" type="text" name="amount" value="<?php if (isset($amount)) print($amount); ?>" /><br />
 	<label for="id_y">Liczba miesięcy: </label>
-	<input id="id_y" type="text" name="y" value="<?php if (isset($y)) print($y); ?>" /><br />
+	<input id="id_y" type="text" name="months" value="<?php if (isset($months)) print($months); ?>" /><br />
 	<label for="id_z">Oprocentowanie: </label>
-	<input id="id_z" type="text" name="z" value="<?php if (isset($z)) print($z); ?>" /><br />
-	<input type="submit" value="Oblicz" />
-</form>	
+	<input id="id_z" type="text" name="interest" value="<?php if (isset($interest)) print($interest); ?>" /><br />
+	<input type="submit" value="Oblicz" class="pure-button pure-button-primary" />
+</form>	-->
+            <form class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>Kalkulator kredytowy</legend>
+        <label for="id_x">Kwota: </label>
+	<input id="id_x" type="text" name="amount" value="<?php if (isset($amount)) print($amount); ?>" /><br />
+	<label for="id_y">Liczba miesięcy: </label>
+	<input id="id_y" type="text" name="months" value="<?php if (isset($months)) print($months); ?>" /><br />
+	<label for="id_z">Oprocentowanie: </label>
+	<input id="id_z" type="text" name="interest" value="<?php if (isset($interest)) print($interest); ?>" /><br />
+    </fieldset>
+    <input type="submit" value="Oblicz" class="pure-button pure-button-primary" />
+</form>
+        </div>
 
 <?php
 //wyświeltenie listy błędów, jeśli istnieją
-if (isset($messages)) {
-	if (count ( $messages ) > 0) {
-		echo '<ol style="margin: 20px; padding: 10px 10px 10px 30px; border-radius: 5px; background-color: #f88; width:300px;">';
-		foreach ( $messages as $key => $msg ) {
+if (isset($msg)) {
+	if (count ( $msg ) > 0) {
+		echo '<ol style="margin: 0; position: absolute;top: 80%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%); border-style:ridge; border-radius: 15px;width: 300px; background-color: red; width:300px;text-align: center;color:white;">';
+		foreach ( $msg as $key => $msg ) {
 			echo '<li>'.$msg.'</li>';
 		}
 		echo '</ol>';
@@ -30,8 +44,8 @@ if (isset($messages)) {
 ?>
 
 <?php if (isset($result)){ ?>
-<div style="margin: 20px; padding: 10px; border-radius: 5px; background-color: #ff0; width:300px;">
-<?php echo 'Wynik: '.round($result, 2); ?>
+<div style="margin: 0; position: absolute;top: 80%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%); border-style:ridge; border-radius: 15px;width: 300px; ;text-align: center; background-color:rgb(240,240,240);  ">
+<?php echo 'Rata będzie wynosić: '.round($result, 2); ?>
 </div>
 <?php } ?>
 
