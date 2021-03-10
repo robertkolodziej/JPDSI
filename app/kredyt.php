@@ -1,33 +1,34 @@
 <?php 
 require_once dirname(__FILE__).'/../config.php';
 
-include _ROOT_PATH.'/app/security/check.php';
+//include _ROOT_PATH.'/app/security/check.php';
+require_once _ROOT_PATH.'/libs/Smarty.class.php';
 //Parametry
-function getParameters(&$amount,&$months,&$interest){
-    $amount = isset($_REQUEST['amount']) ? $_REQUEST['amount'] : null;
-    $months = isset($_REQUEST['months']) ? $_REQUEST['months'] : null;
-    $interest = isset($_REQUEST['interest']) ? $_REQUEST['interest'] : null;
+function getParameters(&$data){
+    $data['amount'] = isset($_REQUEST['amount']) ? $_REQUEST['amount'] : null;
+    $data['months'] = isset($_REQUEST['months']) ? $_REQUEST['months'] : null;
+    $data['interest'] = isset($_REQUEST['interest']) ? $_REQUEST['interest'] : null;
 }
 
 //walidacja
-function validate(&$amount,&$months,&$interest,&$msg){
-    if ( ! (isset($amount) && isset($interest) && isset($months))){
+function validate(&$data,&$msg){
+    if ( ! (isset($data['amount']) && isset($data['months']) && isset($data['interest']))){
         return false; 
     }
-    if($amount == ""){
+    if($data['amount'] == ""){
         $msg[] = "Nie podano kwoty";
     }
-     if($months == ""){
+     if($data['months'] == ""){
         $msg[] = "Nie podano ilości miesięcy";
     }
-     if($interest == ""){
+     if($data['interest'] == ""){
         $msg[] = "Nie podano oprocentowania";
     }
     if (count($msg) != 0) {
         return false;
     }
    
-    if(! is_numeric( $amount) || ! is_numeric( $months ) || ! is_numeric( $interest )){
+    if(! is_numeric($data['amount']) || ! is_numeric($data['months']) || ! is_numeric($data['interest'])){
         $msg[] = "W polach znajdują się dane niebędące liczbami";
     }
     	
@@ -38,27 +39,36 @@ function validate(&$amount,&$months,&$interest,&$msg){
     }
 }
     //wykonanie obliczeń
-    function calculate(&$amount,&$months,&$interest,&$msg,&$result){
-        $amount = floatval($amount);
-	$months = intval($months);
-	$interest = intval($interest);
+    function calculate(&$data,&$msg,&$result){
+        $data['amount'] = floatval($data['amount']);
+	$data['months'] = intval($data['months']);
+	$data['interest'] = intval($data['interest']);
 	
 	
-	$in = (($interest/100)*$amount)/$months;
-	$mo = $amount / $months;
-	$result = $mo + $in;
+	$in = (($data['interest']/100)*$data['amount'])/$data['months'];
+	$mo = $data['amount'] / $data['months'];
+	$result = round($mo + $in,2);
+       
 }
 
 //zmienne
-$amount = null;
-$months = null;
-$interest = null;
+$data = null;
 $msg = [];
 $result = null;
 
-getParameters($amount, $months, $interest);
-if (validate($amount, $months, $interest, $msg)){
-    calculate($amount, $months, $interest, $msg, $result);
+
+
+getParameters($data);
+if (validate($data, $msg)){
+    calculate($data, $msg, $result);
 }
     
-       include 'kredyt_view.php';
+$smarty = new Smarty();
+$smarty->assign('app_url',_APP_URL);
+$smarty->assign('root_path)',_ROOT_PATH);
+$smarty->assign('page_title','Kalkulator');
+$smarty->assign('data',$data);
+$smarty->assign('result',$result);
+$smarty->assign('msg',$msg);
+     
+$smarty->display(_ROOT_PATH.'/app/kredyt_view.tpl');
