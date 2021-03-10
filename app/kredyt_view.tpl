@@ -1,6 +1,6 @@
 {extends file="../templates/main.tpl"}
 
-{block name=footer}<id="footer"> Kalkulator kredytowy stworzony przez Roberta Kołodziej w ramach laboratorium JPDSI</div>{/block}
+{block name=stopka}<p class="copyright"> Kalkulator kredytowy stworzony przez Roberta Kołodziej w ramach laboratorium JPDSI</p>{/block}
 {block name="content"}
   
     	

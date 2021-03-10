@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-10 16:59:36
+/* Smarty version 3.1.39, created on 2021-03-10 20:56:38
   from 'Z:\Xampp\htdocs\kalkulator\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6048ece8267719_01859271',
+  'unifunc' => 'content_60492476225e22_07246574',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1ca7f1b8651989b014791b374ca5a04a85c6e35b' => 
     array (
       0 => 'Z:\\Xampp\\htdocs\\kalkulator\\templates\\main.tpl',
-      1 => 1615391825,
+      1 => 1615405661,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6048ece8267719_01859271 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60492476225e22_07246574 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -54,7 +54,8 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#kredyt">Oblicz ratę!</a></li>						
+								<li><a href="#kredyt">Oblicz swoją ratę!</a></li>	
+                                                               
 							</ul>
 						</nav>
 					</header>
@@ -66,7 +67,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 							<article id="kredyt">
 								<h2 class="major">Oblicz swoja rate!</h2>
 								<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11057360156048ece8265d45_33267869', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_170482589760492476224434_58171687', 'content');
 ?>
 
 
@@ -76,20 +77,21 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11057360156048ece8
 
 					</div>
 
-				<!-- Footer -->
+
+                        <!-- Footer -->
                             
 					<footer id="footer">
                                                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3433383776048ece82665f3_01260345', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_189844718860492476224ce0_69676412', 'stopka');
 ?>
 
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
-
 			</div>
-
-		<!-- BG -->
+				
+<!-- BG -->
 			<div id="bg"></div>
+		
 
 		<!-- Scripts -->
 			<?php echo '<script'; ?>
@@ -117,12 +119,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3433383776048ece82
 </html>
 <?php }
 /* {block 'content'} */
-class Block_11057360156048ece8265d45_33267869 extends Smarty_Internal_Block
+class Block_170482589760492476224434_58171687 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_11057360156048ece8265d45_33267869',
+    0 => 'Block_170482589760492476224434_58171687',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -131,13 +133,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 }
 /* {/block 'content'} */
-/* {block 'footer'} */
-class Block_3433383776048ece82665f3_01260345 extends Smarty_Internal_Block
+/* {block 'stopka'} */
+class Block_189844718860492476224ce0_69676412 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
-  'footer' => 
+  'stopka' => 
   array (
-    0 => 'Block_3433383776048ece82665f3_01260345',
+    0 => 'Block_189844718860492476224ce0_69676412',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -145,5 +147,5 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
  Tu powinna być stopka <?php
 }
 }
-/* {/block 'footer'} */
+/* {/block 'stopka'} */
 }

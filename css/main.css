@@ -25,6 +25,7 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -96,6 +97,7 @@ input, select, textarea {
 
 	body {
 		background: #1b1f22;
+                
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1158,11 +1160,12 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../images/bg.jpg");
+			background-image: url("../images/bga.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
+                       
 		}
 
 		body.is-article-visible #bg:after {
@@ -1634,6 +1637,10 @@ input, select, textarea {
 		max-width: 100%;
 		margin-top: 2rem;
 		text-align: center;
+                position:relative;
+                z-index: 3;
+             
+               
 	}
 
 		#footer .copyright {
@@ -1642,6 +1649,7 @@ input, select, textarea {
 			opacity: 0.75;
 			margin-bottom: 0;
 			text-transform: uppercase;
+                        
 		}
 
 		body.is-article-visible #footer {

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-10 16:30:00
+/* Smarty version 3.1.39, created on 2021-03-10 20:42:45
   from 'Z:\Xampp\htdocs\kalkulator\app\kredyt_view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6048e5f84eb6a8_68183713',
+  'unifunc' => 'content_604921356fb930_62680337',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '208ed1489da98846e32c112e517a02758aad6543' => 
     array (
       0 => 'Z:\\Xampp\\htdocs\\kalkulator\\app\\kredyt_view.tpl',
-      1 => 1615390021,
+      1 => 1615405363,
       2 => 'file',
     ),
   ),
@@ -20,42 +20,42 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6048e5f84eb6a8_68183713 (Smarty_Internal_Template $_smarty_tpl) {
+function content_604921356fb930_62680337 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16751389196048e5f84d4172_90162108', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_258601695604921356ea010_93751224', 'stopka');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4086197796048e5f84d5039_40100279', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_377496939604921356eabd5_66897860', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "../templates/main.tpl");
 }
-/* {block 'footer'} */
-class Block_16751389196048e5f84d4172_90162108 extends Smarty_Internal_Block
+/* {block 'stopka'} */
+class Block_258601695604921356ea010_93751224 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
-  'footer' => 
+  'stopka' => 
   array (
-    0 => 'Block_16751389196048e5f84d4172_90162108',
+    0 => 'Block_258601695604921356ea010_93751224',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div class="copyright"> Kalkulator kredytowy stworzony przez Roberta Kołodziej w ramach laboratorium JPDSI</div><?php
+ Kalkulator kredytowy stworzony przez Roberta Kołodziej w ramach laboratorium JPDSI<?php
 }
 }
-/* {/block 'footer'} */
+/* {/block 'stopka'} */
 /* {block "content"} */
-class Block_4086197796048e5f84d5039_40100279 extends Smarty_Internal_Block
+class Block_377496939604921356eabd5_66897860 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_4086197796048e5f84d5039_40100279',
+    0 => 'Block_377496939604921356eabd5_66897860',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

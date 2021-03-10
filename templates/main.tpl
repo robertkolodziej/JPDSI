@@ -25,7 +25,8 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#kredyt">Oblicz ratę!</a></li>						
+								<li><a href="#kredyt">Oblicz swoją ratę!</a></li>	
+                                                               
 							</ul>
 						</nav>
 					</header>
@@ -44,17 +45,18 @@
 
 					</div>
 
-				<!-- Footer -->
+
+                        <!-- Footer -->
                             
 					<footer id="footer">
-                                                {block name=footer} Tu powinna być stopka {/block}
+                                                {block name=stopka} Tu powinna być stopka {/block}
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
-
 			</div>
-
-		<!-- BG -->
+				
+<!-- BG -->
 			<div id="bg"></div>
+		
 
 		<!-- Scripts -->
 			<script src="{$app_url}/js/jquery.min.js"></script>
