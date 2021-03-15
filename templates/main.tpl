@@ -4,8 +4,8 @@
 		<title>{$page_title|default:"Tytuł domyślny"}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{$app_url}/css/main.css" />
-		<noscript><link rel="stylesheet" href="{$app_url}/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{$conf->app_url}/css/main.css" />
+		<noscript><link rel="stylesheet" href="{$conf->app_url}/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -59,11 +59,11 @@
 		
 
 		<!-- Scripts -->
-			<script src="{$app_url}/js/jquery.min.js"></script>
-			<script src="{$app_url}/js/browser.min.js"></script>
-			<script src="{$app_url}/js/breakpoints.min.js"></script>
-			<script src="{$app_url}/js/util.js"></script>
-			<script src="{$app_url}/js/main.js"></script>
+			<script src="{$conf->app_url}/js/jquery.min.js"></script>
+			<script src="{$conf->app_url}/js/browser.min.js"></script>
+			<script src="{$conf->app_url}/js/breakpoints.min.js"></script>
+			<script src="{$conf->app_url}/js/util.js"></script>
+			<script src="{$conf->app_url}/js/main.js"></script>
 
 	</body>
 </html>
