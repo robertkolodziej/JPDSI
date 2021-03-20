@@ -3,8 +3,8 @@
 
 require_once $conf->root_path.'/libs/Smarty.class.php';
 require_once $conf->root_path.'/Messages.class.php';
-require_once $conf->root_path.'/app/KredytData.class.php';
-require_once $conf->root_path.'/app/KredytResult.class.php';
+require_once $conf->root_path.'/app/calc_credit/KredytData.class.php';
+require_once $conf->root_path.'/app/calc_credit/KredytResult.class.php';
 
 
 class KredytCtrl{
@@ -80,7 +80,7 @@ $smarty->assign('data',$this->data);
 $smarty->assign('result',$this->result);
 $smarty->assign('msgs',$this->msgs);
      
-$smarty->display($conf->root_path.'/app/kredyt_view.tpl');
+$smarty->display($conf->root_path.'/app/calc_credit/kredyt_view.tpl');
 
 }
 }

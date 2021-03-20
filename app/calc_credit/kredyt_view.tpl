@@ -1,11 +1,11 @@
-{extends file="../templates/main.tpl"}
+{extends file="../../templates/main.tpl"}
 
 {block name=stopka}<p class="copyright"> Kalkulator kredytowy stworzony przez Roberta Kołodziej w ramach laboratorium JPDSI</p>{/block}
 {block name="content"}
   
     	
 
-            <form <form action="{$conf->app_url}/app/kredyt.php" method="post" >
+            <form <form action="{$conf->action_root}calcCompute" method="post" >
     <fieldset>
         <label for="id_x">Kwota: </label>
 	<input id="id_x" type="text" name="amount" value="" /><br />
