@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-15 19:59:43
-  from 'Z:\Xampp\htdocs\kalkulator\app\kredyt_view.tpl' */
+/* Smarty version 3.1.39, created on 2021-03-26 17:59:40
+  from 'Z:\Xampp\htdocs\kalkulator\app\views\kredyt_view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_604fae9f38ba75_94965729',
+  'unifunc' => 'content_605e12fc78aff6_33064666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '0cb75b6fabf97488406ee57da28d71e8a16dbc2f' => 
+    '00ffd2a8f05a5bdde9f5298ae71b3591c52142d1' => 
     array (
-      0 => 'Z:\\Xampp\\htdocs\\kalkulator\\app\\kredyt_view.tpl',
-      1 => 1615834779,
+      0 => 'Z:\\Xampp\\htdocs\\kalkulator\\app\\views\\kredyt_view.tpl',
+      1 => 1616777976,
       2 => 'file',
     ),
   ),
@@ -20,27 +20,27 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_604fae9f38ba75_94965729 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605e12fc78aff6_33064666 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_826909753604fae9f37e2c6_07359438', 'stopka');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2101026492605e12fc77c550_19896507', 'stopka');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_937738632604fae9f37eef0_78189099', "content");
-$_smarty_tpl->inheritance->endChild($_smarty_tpl, "../templates/main.tpl");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_838970672605e12fc77d553_95122759', "content");
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, "templates/main.tpl");
 }
 /* {block 'stopka'} */
-class Block_826909753604fae9f37e2c6_07359438 extends Smarty_Internal_Block
+class Block_2101026492605e12fc77c550_19896507 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'stopka' => 
   array (
-    0 => 'Block_826909753604fae9f37e2c6_07359438',
+    0 => 'Block_2101026492605e12fc77c550_19896507',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -50,12 +50,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'stopka'} */
 /* {block "content"} */
-class Block_937738632604fae9f37eef0_78189099 extends Smarty_Internal_Block
+class Block_838970672605e12fc77d553_95122759 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_937738632604fae9f37eef0_78189099',
+    0 => 'Block_838970672605e12fc77d553_95122759',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -64,8 +64,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
   
     	
 
-            <form <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
-/app/kredyt.php" method="post" >
+            <form <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+calcCompute" method="post" >
     <fieldset>
         <label for="id_x">Kwota: </label>
 	<input id="id_x" type="text" name="amount" value="" /><br />

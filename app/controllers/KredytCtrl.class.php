@@ -1,21 +1,20 @@
 <?php 
 
 
-require_once $conf->root_path.'/libs/Smarty.class.php';
-require_once $conf->root_path.'/Messages.class.php';
-require_once $conf->root_path.'/app/calc_credit/KredytData.class.php';
-require_once $conf->root_path.'/app/calc_credit/KredytResult.class.php';
+
+require_once 'KredytData.class.php';
+require_once 'KredytResult.class.php';
 
 
 class KredytCtrl{
-    private $msgs;
+    
     private $data;
     private $result;
     private $in;
     private $mo;
     
     public function __construct() {
-        $this->msgs = new Messages();
+      
         $this->data = new kredytData();
         $this->result = new KredytResult();
     }
@@ -24,9 +23,9 @@ class KredytCtrl{
 
 
 public function getParameters(){
-    $this->data->amount = isset($_REQUEST['amount']) ? $_REQUEST['amount'] : null;
-    $this->data->months= isset($_REQUEST['months']) ? $_REQUEST['months'] : null;
-    $this->data->interest = isset($_REQUEST['interest']) ? $_REQUEST['interest'] : null;
+    $this->data->amount = getFromRequest('amount');
+    $this->data->months= getFromRequest('months');
+    $this->data->interest = getFromRequest('interest');
 }
 
 //walidacja
@@ -35,21 +34,21 @@ public function validate(){
         return false; 
     }
     if($this->data->amount == ""){
-        $this->msgs->addError("Nie podano kwoty");
+        getMessages()->addError("Nie podano kwoty");
     }
      if($this->data->months == ""){
-        $this->msgs->addError("Nie podano ilości miesięcy");
+        getMessages()->addError("Nie podano ilości miesięcy");
     }
      if($this->data->interest == ""){
-       $this->msgs->addError("Nie podano oprocentowania");
+       getMessages()->addError("Nie podano oprocentowania");
     }
-    if (! $this->msgs->isError()) {
+    if (! getMessages()->isError()) {
         
     if(! is_numeric($this->data->amount) || ! is_numeric($this->data->amount) || ! is_numeric($this->data->amount)){
-        $this->msgs->addError("W polach znajdują się dane niebędące liczbami");
+        getMessages()->addError("W polach znajdują się dane niebędące liczbami");
     }
     }	
-    return ! $this->msgs->isError();
+    return ! getMessages()->isError();
     
 }
     //wykonanie obliczeń
@@ -71,16 +70,16 @@ public function validate(){
     }
 
 public function generateView(){
-    global $conf;
     
-$smarty = new Smarty();
-$smarty->assign('conf',$conf);
-$smarty->assign('page_title','Kalkulatory');
-$smarty->assign('data',$this->data);
-$smarty->assign('result',$this->result);
-$smarty->assign('msgs',$this->msgs);
+    
+
+
+    getSmarty()->assign('page_title','Kalkulatory');
+getSmarty()->assign('data',$this->data);
+getSmarty()->assign('result',$this->result);
+
      
-$smarty->display($conf->root_path.'/app/calc_credit/kredyt_view.tpl');
+getSmarty()->display('kredyt_view.tpl');
 
 }
 }
