@@ -6,14 +6,13 @@ switch ($action) {
 	    // załaduj definicję kontrolera
 		include_once $conf->root_path.'/app/controllers/KredytCtrl.class.php';
 		// utwórz obiekt i uzyj
-		$ctrl = new KredytCtrl();
+		$ctrl = new app\controllers\KredytCtrl();
 		$ctrl->generateView ();
 	break;
 	case 'calcCompute' :
-		// załaduj definicję kontrolera
-		include_once $conf->root_path.'/app/controllers/KredytCtrl.class.php';
+		
 		// utwórz obiekt i uzyj
-		$ctrl = new KredytCtrl ();
+		$ctrl = new app\controllers\KredytCtrl();
 		$ctrl->process ();
 	break;
 }

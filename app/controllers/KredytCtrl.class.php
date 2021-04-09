@@ -1,9 +1,9 @@
 <?php 
 
+namespace app\controllers;
 
-
-require_once 'KredytData.class.php';
-require_once 'KredytResult.class.php';
+use app\forms\KredytData;
+use app\transfer\KredytResult;
 
 
 class KredytCtrl{
@@ -44,7 +44,7 @@ public function validate(){
     }
     if (! getMessages()->isError()) {
         
-    if(! is_numeric($this->data->amount) || ! is_numeric($this->data->amount) || ! is_numeric($this->data->amount)){
+    if(! is_numeric($this->data->amount) || ! is_numeric($this->data->months) || ! is_numeric($this->data->interest)){
         getMessages()->addError("W polach znajdują się dane niebędące liczbami");
     }
     }	

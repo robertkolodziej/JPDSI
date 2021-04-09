@@ -1,4 +1,4 @@
-<?php
+<?php namespace core;
 class Messages {
     private $errors = [];
     private $num = 0;
