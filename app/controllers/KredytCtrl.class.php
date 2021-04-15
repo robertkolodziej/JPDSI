@@ -73,7 +73,7 @@ public function generateView(){
     
     
 
-
+getSmarty()->assign('user',unserialize($_SESSION['user']));
     getSmarty()->assign('page_title','Kalkulatory');
 getSmarty()->assign('data',$this->data);
 getSmarty()->assign('result',$this->result);

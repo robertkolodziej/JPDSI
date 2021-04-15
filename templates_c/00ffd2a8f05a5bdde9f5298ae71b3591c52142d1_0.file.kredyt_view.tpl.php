@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 17:59:40
+/* Smarty version 3.1.39, created on 2021-04-15 23:23:29
   from 'Z:\Xampp\htdocs\kalkulator\app\views\kredyt_view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605e12fc78aff6_33064666',
+  'unifunc' => 'content_6078aed1c7cf40_70192111',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '00ffd2a8f05a5bdde9f5298ae71b3591c52142d1' => 
     array (
       0 => 'Z:\\Xampp\\htdocs\\kalkulator\\app\\views\\kredyt_view.tpl',
-      1 => 1616777976,
+      1 => 1618521808,
       2 => 'file',
     ),
   ),
@@ -20,27 +20,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605e12fc78aff6_33064666 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6078aed1c7cf40_70192111 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
+
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2101026492605e12fc77c550_19896507', 'stopka');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6995595146078aed1c69122_19477987', 'stopka');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_838970672605e12fc77d553_95122759', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19545173706078aed1c69ec9_67499831', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "templates/main.tpl");
 }
 /* {block 'stopka'} */
-class Block_2101026492605e12fc77c550_19896507 extends Smarty_Internal_Block
+class Block_6995595146078aed1c69122_19477987 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'stopka' => 
   array (
-    0 => 'Block_2101026492605e12fc77c550_19896507',
+    0 => 'Block_6995595146078aed1c69122_19477987',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -50,19 +51,25 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'stopka'} */
 /* {block "content"} */
-class Block_838970672605e12fc77d553_95122759 extends Smarty_Internal_Block
+class Block_19545173706078aed1c69ec9_67499831 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_838970672605e12fc77d553_95122759',
+    0 => 'Block_19545173706078aed1c69ec9_67499831',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
   
-    	
+    	<div>
+	<a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+logout"  >wyloguj</a>
+	<span style="float:right;">użytkownik: <?php echo $_smarty_tpl->tpl_vars['user']->value->login;?>
+, rola: <?php echo $_smarty_tpl->tpl_vars['user']->value->role;?>
+</span>
+</div>
 
             <form <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 calcCompute" method="post" >

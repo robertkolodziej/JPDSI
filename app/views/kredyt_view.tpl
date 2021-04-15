@@ -1,9 +1,13 @@
 {extends file="templates/main.tpl"}
 
+
 {block name=stopka}<p class="copyright"> Kalkulator kredytowy stworzony przez Roberta Kołodziej w ramach laboratorium JPDSI</p>{/block}
 {block name="content"}
   
-    	
+    	<div>
+	<a href="{$conf->action_url}logout"  >wyloguj</a>
+	<span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>
+</div>
 
             <form <form action="{$conf->action_root}calcCompute" method="post" >
     <fieldset>
