@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 17:59:40
+/* Smarty version 3.1.39, created on 2021-04-20 18:17:56
   from 'Z:\Xampp\htdocs\kalkulator\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605e12fc7aca61_84255427',
+  'unifunc' => 'content_607efeb4d5dbe7_97541018',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ebd23689948ae1d80b8bd60a7e04a21f95e6512a' => 
     array (
       0 => 'Z:\\Xampp\\htdocs\\kalkulator\\app\\views\\templates\\main.tpl',
-      1 => 1615830989,
+      1 => 1618931044,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605e12fc7aca61_84255427 (Smarty_Internal_Template $_smarty_tpl) {
+function content_607efeb4d5dbe7_97541018 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -67,7 +67,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 							<article id="kredyt">
 								<h2 class="major">Oblicz swoja rate!</h2>
 								<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1369767211605e12fc7a9719_17643580', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1270266117607efeb4d5aa16_63178312', 'content');
 ?>
 
 
@@ -82,7 +82,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1369767211605e12fc
                             
 					<footer id="footer">
                                                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1646256960605e12fc7a9fa3_98650781', 'stopka');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1776344990607efeb4d5b301_57772767', 'stopka');
 ?>
 
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
@@ -119,12 +119,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1646256960605e12fc
 </html>
 <?php }
 /* {block 'content'} */
-class Block_1369767211605e12fc7a9719_17643580 extends Smarty_Internal_Block
+class Block_1270266117607efeb4d5aa16_63178312 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1369767211605e12fc7a9719_17643580',
+    0 => 'Block_1270266117607efeb4d5aa16_63178312',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -134,12 +134,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'stopka'} */
-class Block_1646256960605e12fc7a9fa3_98650781 extends Smarty_Internal_Block
+class Block_1776344990607efeb4d5b301_57772767 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'stopka' => 
   array (
-    0 => 'Block_1646256960605e12fc7a9fa3_98650781',
+    0 => 'Block_1776344990607efeb4d5b301_57772767',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

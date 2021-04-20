@@ -52,7 +52,7 @@ public function validate(){
     
 }
     //wykonanie obliczeń
-    public function process(){
+    public function action_calcCompute(){
         $this->getparameters();
         if($this->validate()){
         $this->data->amount = floatval($this->data->amount);
@@ -71,7 +71,7 @@ public function validate(){
 
 public function generateView(){
     
-    
+
 
 getSmarty()->assign('user',unserialize($_SESSION['user']));
     getSmarty()->assign('page_title','Kalkulatory');
