@@ -64,7 +64,31 @@ public function validate(){
 	$this->mo = $this->data->amount / $this->data->months;
 	$this->result->result = round($this->mo + $this->in,2);
         
-       
+       try {
+           $database = new \Medoo\Medoo([
+        'database_type' => 'mysql',
+	'database_name' => 'kredyt',
+	'server' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+        'charset' => 'utf8',
+	'collation' => 'utf8_polish_ci',
+	'port' => 3306,
+         'option' => [
+             \PDO::ATTR_CASE => \PDO::CASE_NATURAL,
+             \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
+                   ]
+                   ]); 
+           $database->insert("formularz", [
+               "kwota" => $this->data->amount,
+               "okres" => $this->data->months,
+               "oprocentowanie" => $this->data->interest,
+               "rezultat" => $this->result->result,
+               "data" => date("Y-m-d H:i:s")
+           ]);
+       } catch (\PDOException $ex) {
+           getMessages() ->addError("DB Error: ".$ex->getMessage());
+       }
 }
  $this->generateView();  
     }
