@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-20 18:17:56
+/* Smarty version 3.1.39, created on 2021-04-23 20:42:41
   from 'Z:\Xampp\htdocs\kalkulator\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_607efeb4d5dbe7_97541018',
+  'unifunc' => 'content_608315214a4c49_15962423',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ebd23689948ae1d80b8bd60a7e04a21f95e6512a' => 
     array (
       0 => 'Z:\\Xampp\\htdocs\\kalkulator\\app\\views\\templates\\main.tpl',
-      1 => 1618931044,
+      1 => 1619191209,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_607efeb4d5dbe7_97541018 (Smarty_Internal_Template $_smarty_tpl) {
+function content_608315214a4c49_15962423 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -67,13 +67,16 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 							<article id="kredyt">
 								<h2 class="major">Oblicz swoja rate!</h2>
 								<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1270266117607efeb4d5aa16_63178312', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1926105743608315214a14f9_04350874', 'content');
 ?>
 
 
 							</article>
 
 
+                                                            <?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_623125522608315214a1d56_70516114', 'bottom');
+?>
 
 					</div>
 
@@ -82,7 +85,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1270266117607efeb4
                             
 					<footer id="footer">
                                                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1776344990607efeb4d5b301_57772767', 'stopka');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_609486134608315214a2495_27914375', 'stopka');
 ?>
 
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
@@ -119,12 +122,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1776344990607efeb4
 </html>
 <?php }
 /* {block 'content'} */
-class Block_1270266117607efeb4d5aa16_63178312 extends Smarty_Internal_Block
+class Block_1926105743608315214a14f9_04350874 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1270266117607efeb4d5aa16_63178312',
+    0 => 'Block_1926105743608315214a14f9_04350874',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -133,13 +136,28 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 }
 /* {/block 'content'} */
+/* {block 'bottom'} */
+class Block_623125522608315214a1d56_70516114 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'bottom' => 
+  array (
+    0 => 'Block_623125522608315214a1d56_70516114',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ tu powinna być baza danych...<?php
+}
+}
+/* {/block 'bottom'} */
 /* {block 'stopka'} */
-class Block_1776344990607efeb4d5b301_57772767 extends Smarty_Internal_Block
+class Block_609486134608315214a2495_27914375 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'stopka' => 
   array (
-    0 => 'Block_1776344990607efeb4d5b301_57772767',
+    0 => 'Block_609486134608315214a2495_27914375',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

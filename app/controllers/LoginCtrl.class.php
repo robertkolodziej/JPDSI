@@ -76,6 +76,7 @@ class LoginCtrl{
 		if ($this->validate()){
 			//zalogowany => przekieruj na stronę główną, gdzie uruchomiona zostanie domyślna akcja
 			header("Location: ".getConf()->app_url."/");
+//                    redirectTo("KredytList");
 		} else {
 			//niezalogowany => wyświetl stronę logowania
 			$this->generateView(); 

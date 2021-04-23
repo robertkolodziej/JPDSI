@@ -6,7 +6,7 @@
   
     	<div>
 	<a href="{$conf->action_url}logout"  >wyloguj</a>
-	<span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>
+	
 </div>
 
             <form <form action="{$conf->action_root}calcCompute" method="post" >
@@ -43,4 +43,38 @@
 	{$result ->result}
 	</p>
 {/if}
+{/block}
+
+
+{block name=bottom}
+
+
+
+<table id="tab_kredyt" class="pure-table pure-table-bordered">
+<thead>
+	<tr>
+		<th>kwota</th>
+		<th>okres</th>
+		<th>oprocentowanie</th>
+		<th>rezultat</th>
+                <th>data</th>
+	</tr>
+</thead>
+<tbody>
+{foreach $result2 as $p}
+{strip}
+	<tr>
+		<td>{$p["kwota"]}</td>
+		<td>{$p["okres"]}</td>
+		<td>{$p["oprocentowanie"]}</td>
+                <td>{$p["rezultat"]}</td>
+                <td>{$p["data"]}</td>
+			
+		</td>
+	</tr>
+{/strip}
+{/foreach}
+</tbody>
+</table>
+
 {/block}

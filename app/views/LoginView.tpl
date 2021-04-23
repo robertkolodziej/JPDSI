@@ -1,4 +1,4 @@
-{extends file="main.tpl"}
+{extends file="templates/main.tpl"}
 
 {block name=content}
 <form action="{$conf->action_url}login" method="post"  class="pure-form pure-form-aligned bottom-margin">

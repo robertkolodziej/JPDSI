@@ -86,6 +86,17 @@ public function validate(){
                "rezultat" => $this->result->result,
                "data" => date("Y-m-d H:i:s")
            ]);
+           
+           $this->records = $database->select("formularz", [
+                                        "kwota",
+					"okres",
+					"oprocentowanie",
+					"rezultat",
+					"data",
+				], $where );
+		} catch (PDOException $e){
+			getMessages()->addError('Wystąpił błąd podczas pobierania rekordów');
+			if (getConf()->debug) getMessages()->addError($e->getMessage());
        } catch (\PDOException $ex) {
            getMessages() ->addError("DB Error: ".$ex->getMessage());
        }
@@ -98,10 +109,10 @@ public function generateView(){
 
 
 getSmarty()->assign('user',unserialize($_SESSION['user']));
-    getSmarty()->assign('page_title','Kalkulatory');
+getSmarty()->assign('page_title','Kalkulatory');
 getSmarty()->assign('data',$this->data);
 getSmarty()->assign('result',$this->result);
-
+getSmarty()->assign('result2',$this->records); 
      
 getSmarty()->display('kredyt_view.tpl');
 

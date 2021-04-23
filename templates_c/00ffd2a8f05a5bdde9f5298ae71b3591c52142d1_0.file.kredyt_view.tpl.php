@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-23 16:10:42
+/* Smarty version 3.1.39, created on 2021-04-23 21:03:18
   from 'Z:\Xampp\htdocs\kalkulator\app\views\kredyt_view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6082d5623a7e14_63615296',
+  'unifunc' => 'content_608319f6d91494_17796577',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '00ffd2a8f05a5bdde9f5298ae71b3591c52142d1' => 
     array (
       0 => 'Z:\\Xampp\\htdocs\\kalkulator\\app\\views\\kredyt_view.tpl',
-      1 => 1618931044,
+      1 => 1619204589,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6082d5623a7e14_63615296 (Smarty_Internal_Template $_smarty_tpl) {
+function content_608319f6d91494_17796577 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -28,20 +28,26 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7834888386082d562394b14_81243268', 'stopka');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2047780579608319f6d7ecf4_02245395', 'stopka');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16909607956082d562395e56_38326836', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1341170263608319f6d7f8e9_20353813', "content");
+?>
+
+
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1691780884608319f6d8d6e1_89129857', 'bottom');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "templates/main.tpl");
 }
 /* {block 'stopka'} */
-class Block_7834888386082d562394b14_81243268 extends Smarty_Internal_Block
+class Block_2047780579608319f6d7ecf4_02245395 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'stopka' => 
   array (
-    0 => 'Block_7834888386082d562394b14_81243268',
+    0 => 'Block_2047780579608319f6d7ecf4_02245395',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -51,12 +57,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'stopka'} */
 /* {block "content"} */
-class Block_16909607956082d562395e56_38326836 extends Smarty_Internal_Block
+class Block_1341170263608319f6d7f8e9_20353813 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_16909607956082d562395e56_38326836',
+    0 => 'Block_1341170263608319f6d7f8e9_20353813',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -66,9 +72,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     	<div>
 	<a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 logout"  >wyloguj</a>
-	<span style="float:right;">użytkownik: <?php echo $_smarty_tpl->tpl_vars['user']->value->login;?>
-, rola: <?php echo $_smarty_tpl->tpl_vars['user']->value->role;?>
-</span>
+	
 </div>
 
             <form <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
@@ -116,4 +120,52 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 }
 /* {/block "content"} */
+/* {block 'bottom'} */
+class Block_1691780884608319f6d8d6e1_89129857 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'bottom' => 
+  array (
+    0 => 'Block_1691780884608319f6d8d6e1_89129857',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+
+
+
+<table id="tab_kredyt" class="pure-table pure-table-bordered">
+<thead>
+	<tr>
+		<th>kwota</th>
+		<th>okres</th>
+		<th>oprocentowanie</th>
+		<th>rezultat</th>
+                <th>data</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['result2']->value, 'p');
+$_smarty_tpl->tpl_vars['p']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['p']->value) {
+$_smarty_tpl->tpl_vars['p']->do_else = false;
+?>
+<tr><td><?php echo $_smarty_tpl->tpl_vars['p']->value["kwota"];?>
+</td><td><?php echo $_smarty_tpl->tpl_vars['p']->value["okres"];?>
+</td><td><?php echo $_smarty_tpl->tpl_vars['p']->value["oprocentowanie"];?>
+</td><td><?php echo $_smarty_tpl->tpl_vars['p']->value["rezultat"];?>
+</td><td><?php echo $_smarty_tpl->tpl_vars['p']->value["data"];?>
+</td></td></tr>
+<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+</tbody>
+</table>
+
+<?php
+}
+}
+/* {/block 'bottom'} */
 }

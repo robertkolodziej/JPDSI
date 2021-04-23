@@ -42,7 +42,7 @@
 							</article>
 
 
-
+                                                            {block name=bottom} tu powinna być baza danych...{/block}
 					</div>
 
 
